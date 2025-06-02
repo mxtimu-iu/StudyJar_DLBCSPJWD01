@@ -22,20 +22,22 @@ const sessionSchema = new mongoose.Schema({
     },
     endTime: {
         type: Date,
-        required: true,
+        required: false,
     },
     duration: {
         type: Number, // Duration in minutes
-        required: true,
+        required: false,
+        default: 0,
     },
     gemType: {
         type: String,
         enum: ['pebble', 'gem', 'crystal'],
         required: true,
+        default: 'pebble',
     },
     completed: {
         type: Boolean,
-        default: true,
+        default: false,
     },
 }, {
     timestamps: true,
@@ -43,12 +45,14 @@ const sessionSchema = new mongoose.Schema({
 
 // Calculate gem type based on duration
 sessionSchema.pre('save', function (next) {
-    if (this.duration >= 60) {
-        this.gemType = 'crystal';
-    } else if (this.duration >= 30) {
-        this.gemType = 'gem';
-    } else {
-        this.gemType = 'pebble';
+    if (this.completed) {
+        if (this.duration >= 60) {
+            this.gemType = 'crystal';
+        } else if (this.duration >= 30) {
+            this.gemType = 'gem';
+        } else {
+            this.gemType = 'pebble';
+        }
     }
     next();
 });

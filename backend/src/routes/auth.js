@@ -18,9 +18,15 @@ router.post(
     ],
     async (req, res) => {
         try {
+            console.log('Register request body:', req.body);
+
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
-                return res.status(400).json({ errors: errors.array() });
+                console.log('Validation errors:', errors.array());
+                return res.status(400).json({
+                    message: 'Validation failed',
+                    errors: errors.array()
+                });
             }
 
             const { username, email, password } = req.body;
@@ -28,8 +34,9 @@ router.post(
             // Check if user exists
             const userExists = await User.findOne({ $or: [{ email }, { username }] });
             if (userExists) {
+                console.log('User already exists:', email);
                 return res.status(400).json({
-                    message: 'User already exists',
+                    message: 'A user with this email or username already exists',
                 });
             }
 
@@ -45,6 +52,7 @@ router.post(
                 expiresIn: '30d',
             });
 
+            console.log('User registered successfully:', email);
             res.status(201).json({
                 token,
                 user: {
@@ -56,7 +64,11 @@ router.post(
                 },
             });
         } catch (error) {
-            res.status(500).json({ message: 'Server error' });
+            console.error('Registration error:', error);
+            res.status(500).json({
+                message: 'Server error during registration',
+                error: error.message
+            });
         }
     }
 );
@@ -70,9 +82,15 @@ router.post(
     ],
     async (req, res) => {
         try {
+            console.log('Login request body:', req.body);
+
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
-                return res.status(400).json({ errors: errors.array() });
+                console.log('Login validation errors:', errors.array());
+                return res.status(400).json({
+                    message: 'Validation failed',
+                    errors: errors.array()
+                });
             }
 
             const { email, password } = req.body;
@@ -80,13 +98,15 @@ router.post(
             // Find user
             const user = await User.findOne({ email });
             if (!user) {
-                return res.status(401).json({ message: 'Invalid credentials' });
+                console.log('User not found:', email);
+                return res.status(401).json({ message: 'Invalid email or password' });
             }
 
             // Check password
             const isMatch = await user.matchPassword(password);
             if (!isMatch) {
-                return res.status(401).json({ message: 'Invalid credentials' });
+                console.log('Invalid password for user:', email);
+                return res.status(401).json({ message: 'Invalid email or password' });
             }
 
             // Generate token
@@ -94,6 +114,7 @@ router.post(
                 expiresIn: '30d',
             });
 
+            console.log('User logged in successfully:', email);
             res.json({
                 token,
                 user: {
@@ -105,7 +126,11 @@ router.post(
                 },
             });
         } catch (error) {
-            res.status(500).json({ message: 'Server error' });
+            console.error('Login error:', error);
+            res.status(500).json({
+                message: 'Server error during login',
+                error: error.message
+            });
         }
     }
 );

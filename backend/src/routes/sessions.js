@@ -14,9 +14,6 @@ router.post('/start', protect, async (req, res) => {
             user: req.user._id,
             subject,
             startTime: new Date(),
-            endTime: new Date(), // Will be updated when session ends
-            duration: 0, // Will be updated when session ends
-            gemType: 'pebble' // Default to pebble, will be updated based on duration when session ends
         });
 
         res.status(201).json(session);
@@ -45,11 +42,13 @@ router.post('/end/:id', protect, async (req, res) => {
 
         session.endTime = endTime;
         session.duration = duration;
+        session.completed = true;
         await session.save();
 
         res.json(session);
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        console.error('Session end error:', error);
+        res.status(500).json({ message: 'Server error', error: error.message });
     }
 });
 
@@ -69,7 +68,8 @@ router.get('/today', protect, async (req, res) => {
 
         res.json(sessions);
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        console.error('Get today\'s sessions error:', error);
+        res.status(500).json({ message: 'Server error', error: error.message });
     }
 });
 
@@ -88,7 +88,8 @@ router.get('/range', protect, async (req, res) => {
 
         res.json(sessions);
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        console.error('Get sessions by range error:', error);
+        res.status(500).json({ message: 'Server error', error: error.message });
     }
 });
 
