@@ -8,6 +8,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const sessionRoutes = require('./routes/sessions');
 const dailyProgressRoutes = require('./routes/dailyProgress');
+const analyticsRoutes = require('./routes/analytics');
 
 // Connect to MongoDB
 connectDB();
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/sessions', sessionRoutes);
 app.use('/api/daily-progress', dailyProgressRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 // Basic route for testing
 app.get('/api/test', (req, res) => {
