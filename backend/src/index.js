@@ -7,6 +7,7 @@ const connectDB = require('./config/db');
 // Import routes
 const authRoutes = require('./routes/auth');
 const sessionRoutes = require('./routes/sessions');
+const dailyProgressRoutes = require('./routes/dailyProgress');
 
 // Connect to MongoDB
 connectDB();
@@ -33,6 +34,7 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/sessions', sessionRoutes);
+app.use('/api/daily-progress', dailyProgressRoutes);
 
 // Basic route for testing
 app.get('/api/test', (req, res) => {

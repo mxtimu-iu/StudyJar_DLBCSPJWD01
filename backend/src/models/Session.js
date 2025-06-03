@@ -85,6 +85,33 @@ sessionSchema.statics.getStats = async function (userId, startDate, endDate) {
     ]);
 };
 
+// Update daily progress when session is completed
+sessionSchema.post('save', async function () {
+    if (this.completed) {
+        const DailyProgress = mongoose.model('DailyProgress');
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        let progress = await DailyProgress.findOne({
+            user: this.user,
+            date: {
+                $gte: today,
+                $lt: new Date(today.getTime() + 24 * 60 * 60 * 1000)
+            }
+        });
+
+        if (!progress) {
+            progress = await DailyProgress.create({
+                user: this.user,
+                date: today
+            });
+        }
+
+        progress.sessions.addToSet(this._id);
+        await progress.updateProgress(this.duration);
+    }
+});
+
 const Session = mongoose.model('Session', sessionSchema);
 
 module.exports = Session; 
