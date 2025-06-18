@@ -1,14 +1,14 @@
-# The Gem Jar 💎
+# The Gem Jar 
 
 A gamified productivity web application that turns your study sessions into beautiful gems. Stay focused, collect gems, and watch your jar fill up with your achievements!
 
 ## Features
 
-- 🕒 Focus Timer: Track your study sessions
-- 💎 Gem Collection: Convert study time into beautiful gems
-- 📊 Progress Dashboard: View your daily and weekly stats
-- 🎨 Customization: Choose gem colors for different subjects
-- 🏆 Achievements: Unlock special gems and effects
+-  Focus Timer: Track your study sessions
+-  Gem Collection: Convert study time into beautiful gems
+-  Progress Dashboard: View your daily and weekly stats
+-  Customization: Choose gem colors for different subjects
+-  Achievements: Unlock special gems and effects
 
 ## Tech Stack
 
