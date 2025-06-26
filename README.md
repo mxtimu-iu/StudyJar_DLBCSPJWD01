@@ -118,3 +118,10 @@ REACT_APP_API_URL=http://localhost:5000
 ```
 
 Note: These are example values for development. Use secure, unique values in production. 
+
+## Test Cases 
+### Test Case 1: User can sign up with valid credentials
+1. Go to the sign-up page
+2. Enter a valid email and password
+3. Click “Create account”
+> Expected: Redirected to the dashboard. 
