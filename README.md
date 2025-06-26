@@ -121,8 +121,25 @@ REACT_APP_API_URL=http://localhost:5000
 Note: These are example values for development. Use secure, unique values in production. 
 
 ## Test Cases 
+## Test Case Section : User Authentication
 ### Test Case 1: User can sign up with valid credentials
 1. Go to the sign-up page
 2. Enter a valid email and password
 3. Click “Create account”
 > Expected: Redirected to the dashboard. 
+### Test Case 2: User cannot sign up with an existing email
+1. Use an email already registered
+> Expected: Error message appears.
+### Test Case 3: User can log in with valid credentials
+1. Use correct email and password
+> Expected: Redirected to the dashboard.
+### Test Case 4: User cannot log in with invalid credentials
+1. Use incorrect login info
+> Expected: Redirected to the dashboard. 
+### Test Case 5: User can log in using test account
+1. Test Email: alyssa@example.com
+2. Test Email Password: car123
+> Expected: Redirected to the dashboard.
+### Test Case 6: User can log out
+1. Click the “Logout” button
+> Expected: Redirected to login page when you click the back button you should be redirected to the landing page.
