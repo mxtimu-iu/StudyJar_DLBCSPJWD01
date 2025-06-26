@@ -1,3 +1,4 @@
+![brave_screenshot_localhost (5)-perfect picture](https://github.com/user-attachments/assets/009483ec-f463-4268-90d4-c94465e4b6a6)
 # The Gem Jar 
 
 A gamified productivity web application that turns your study sessions into beautiful gems. Stay focused, collect gems, and watch your jar fill up with your achievements!
