@@ -22,6 +22,12 @@ A gamified productivity web application that turns your study sessions into beau
 - MongoDB for database
 - JWT Authentication
 
+
+## Prerequisites
+- Git
+- Node.js version 22.12.1
+- npm version 11.4.2 
+
 ## Getting Started
 
 1. Clone the repository
