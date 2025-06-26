@@ -143,3 +143,25 @@ Note: These are example values for development. Use secure, unique values in pro
 ### Test Case 6: User can log out
 1. Click the “Logout” button
 > Expected: Redirected to login page when you click the back button you should be redirected to the landing page.
+ 
+## Test Case Section : Study Session Management (Authenticated User)
+### Test Case 1: User fills the jar during a study session
+1. Start a session
+> Expected: Water appears in the jar and grows with time.
+
+### Test Case 2: User can tag a study session
+1. Choose from 4 tag options
+> Expected: Tag is saved and visible in analytics.
+
+### Test Case 3: User can set a study time goal
+1. Input a time goal for the day
+> Expected: Progress tracked against this goal.
+
+## Test Case Section : Analytics Features
+### Test Case 1: User can view weekly and monthly analytics
+1. Navigate to analytics dashboard, user should be able to view stats for both the week and Month. 
+> Expected: the stats should reflect in both the pie chart and bar graph for the chosen setting (Week or Month)
+
+### Test Case 2: User can see a pie chart of tag usage
+> Expected: Pie chart displays tag distribution accurately.
+
