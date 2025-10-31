@@ -4,26 +4,26 @@ import { motion } from 'framer-motion';
 
 export const Landing: React.FC = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-dark-bg dark:to-dark-card">
+        <div className="min-h-screen bg-gradient-to-br from-[#E5E5E5] to-[#FFFFFF] dark:from-[#000000] dark:to-[#14213D]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Navigation */}
                 <nav className="py-6">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center">
-                            <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                            <span className="text-2xl font-bold text-[#FCA311] dark:text-[#FCA311]">
                                 Study-Jar
                             </span>
                         </div>
                         <div className="flex items-center space-x-4">
                             <Link
                                 to="/login"
-                                className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-4 py-2 rounded-md text-sm font-medium"
+                                className="text-[#14213D] dark:text-[#E5E5E5] hover:text-[#FCA311] dark:hover:text-[#FCA311] px-4 py-2 rounded-md text-sm font-medium"
                             >
                                 Sign In
                             </Link>
                             <Link
                                 to="/register"
-                                className="bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium"
+                                className="bg-[#FCA311] text-[#000000] hover:bg-[#e38f0d] px-4 py-2 rounded-md text-sm font-medium"
                             >
                                 Get Started
                             </Link>
@@ -40,24 +40,24 @@ export const Landing: React.FC = () => {
                             transition={{ duration: 0.5 }}
                             className="max-w-2xl"
                         >
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                            <h1 className="text-4xl sm:text-5xl font-bold text-[#14213D] dark:text-white mb-6">
                                 Turn Your Study Sessions Into
-                                <span className="text-indigo-600 dark:text-indigo-400"> Beautiful Gems</span>
+                                <span className="text-[#FCA311] dark:text-[#FCA311]"> Beautiful Gems</span>
                             </h1>
-                            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                            <p className="text-lg text-[#14213D] dark:text-[#E5E5E5] mb-8">
                                 Track your progress, collect gems, and watch your jar fill up with your achievements.
                                 Make studying more engaging and rewarding with Study-Jar.
                             </p>
                             <div className="flex space-x-4">
                                 <Link
                                     to="/register"
-                                    className="bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-lg text-lg font-medium"
+                                    className="bg-[#FCA311] text-[#000000] hover:bg-[#e38f0d] px-8 py-3 rounded-lg text-lg font-medium"
                                 >
                                     Start Free
                                 </Link>
                                 <Link
                                     to="/login"
-                                    className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-dark-bg px-8 py-3 rounded-lg text-lg font-medium"
+                                    className="border-2 border-[#FCA311] text-[#FCA311] hover:bg-[#FCA311] hover:text-[#000000] dark:text-[#FCA311] dark:hover:bg-[#FCA311] dark:hover:text-[#000000] px-8 py-3 rounded-lg text-lg font-medium"
                                 >
                                     Sign In
                                 </Link>
@@ -71,25 +71,25 @@ export const Landing: React.FC = () => {
                             className="relative flex justify-center lg:justify-end"
                         >
                             <div className="w-full max-w-md">
-                                <div className="bg-white dark:bg-dark-card rounded-2xl shadow-xl p-6 transform rotate-3">
+                                <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-2xl shadow-xl p-6 transform rotate-3">
                                     <div className="aspect-square relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-dark-bg dark:to-dark-card rounded-xl" />
-                                        <div className="absolute inset-4 bg-white dark:bg-dark-card rounded-lg shadow-lg p-4">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#FCA311] to-[#E5E5E5] dark:from-[#14213D] dark:to-[#000000] rounded-xl" />
+                                        <div className="absolute inset-4 bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg p-4">
                                             <div className="h-full flex flex-col">
                                                 <div className="flex-1 flex items-center justify-center">
                                                     <div className="w-32 h-32 relative">
-                                                        <div className="absolute inset-0 bg-indigo-100 dark:bg-dark-bg rounded-full" />
-                                                        <div className="absolute inset-4 bg-indigo-200 dark:bg-dark-card rounded-full" />
-                                                        <div className="absolute inset-8 bg-indigo-300 dark:bg-indigo-900 rounded-full flex items-center justify-center">
-                                                            <span className="text-2xl font-bold text-white">75%</span>
+                                                        <div className="absolute inset-0 bg-[#14213D] dark:bg-[#000000] rounded-full" />
+                                                        <div className="absolute inset-4 bg-[#FCA311] dark:bg-[#FCA311] rounded-full" />
+                                                        <div className="absolute inset-8 bg-[#FFFFFF] dark:bg-[#14213D] rounded-full flex items-center justify-center">
+                                                            <span className="text-2xl font-bold text-[#14213D] dark:text-[#FCA311]">75%</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="text-center mt-4">
-                                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                                                    <h3 className="text-lg font-semibold text-[#14213D] dark:text-white">
                                                         Today's Progress
                                                     </h3>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                                                    <p className="text-sm text-[#14213D] dark:text-[#E5E5E5]">
                                                         90 minutes studied
                                                     </p>
                                                 </div>
@@ -104,40 +104,40 @@ export const Landing: React.FC = () => {
 
                 {/* Features Section */}
                 <div className="py-20">
-                    <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                    <h2 className="text-3xl font-bold text-center text-[#14213D] dark:text-white mb-12">
                         Why Choose Study-Jar?
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div className="bg-white dark:bg-dark-card rounded-xl p-6 shadow-lg">
-                            <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4">
+                        <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-xl p-6 shadow-lg">
+                            <div className="w-12 h-12 bg-[#FCA311] dark:bg-[#FCA311] rounded-lg flex items-center justify-center mb-4">
                                 <span className="text-2xl">⏱️</span>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                            <h3 className="text-xl font-semibold text-[#14213D] dark:text-white mb-2">
                                 Focus Timer
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300">
+                            <p className="text-[#14213D] dark:text-[#E5E5E5]">
                                 Track your study sessions with our built-in timer and stay focused on your goals.
                             </p>
                         </div>
-                        <div className="bg-white dark:bg-dark-card rounded-xl p-6 shadow-lg">
-                            <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4">
+                        <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-xl p-6 shadow-lg">
+                            <div className="w-12 h-12 bg-[#FCA311] dark:bg-[#FCA311] rounded-lg flex items-center justify-center mb-4">
                                 <span className="text-2xl">💎</span>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                            <h3 className="text-xl font-semibold text-[#14213D] dark:text-white mb-2">
                                 Gem Collection
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300">
+                            <p className="text-[#14213D] dark:text-[#E5E5E5]">
                                 Convert your study time into beautiful gems and watch your collection grow.
                             </p>
                         </div>
-                        <div className="bg-white dark:bg-dark-card rounded-xl p-6 shadow-lg">
-                            <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4">
+                        <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-xl p-6 shadow-lg">
+                            <div className="w-12 h-12 bg-[#FCA311] dark:bg-[#FCA311] rounded-lg flex items-center justify-center mb-4">
                                 <span className="text-2xl">📊</span>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                            <h3 className="text-xl font-semibold text-[#14213D] dark:text-white mb-2">
                                 Progress Tracking
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300">
+                            <p className="text-[#14213D] dark:text-[#E5E5E5]">
                                 Monitor your study habits and achievements with detailed analytics.
                             </p>
                         </div>
