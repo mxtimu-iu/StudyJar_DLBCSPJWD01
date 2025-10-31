@@ -11,12 +11,12 @@ const dailyProgressRoutes = require('./routes/dailyProgress');
 const analyticsRoutes = require('./routes/analytics');
 
 // Connect to MongoDB
-connectDB(); // <-- ⚠️ YOUR CRASH IS LIKELY HAPPENING INSIDE THIS FUNCTION
+connectDB(); 
 
 const app = express();
 
 // --- START: UPDATED CORS CONFIGURATION ---
-// This is the URL you will get from Vercel after you deploy your frontend
+// This is the URL i will get from Vercel after you deploy your frontend
 const VERCEL_CLIENT_URL = "https://study-jar-dlbcspjwd-01-frontend.vercel.app";
 
 const corsOptions = {
