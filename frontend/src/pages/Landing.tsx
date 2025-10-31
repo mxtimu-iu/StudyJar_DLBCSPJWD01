@@ -108,6 +108,30 @@ export const Landing: React.FC = () => {
                     </div>
                 </div>
 
+                {/* About Section */}
+                <div className="py-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="w-full flex justify-center lg:justify-start">
+                            <img
+                                src="/Gemini_Generated_Image_eencf7eencf7eenc.png"
+                                alt="Study-Jar illustration"
+                                className="w-full max-w-md drop-shadow-xl"
+                            />
+                        </div>
+                        <div className="space-y-6">
+                            <h2 className="text-3xl font-bold text-[#14213D] dark:text-white">
+                                Why I Built Study-Jar
+                            </h2>
+                            <p className="text-lg text-[#14213D] dark:text-[#E5E5E5]">
+                                As a computer science student, I'm a firm believer in using technology to solve real-world problems. I was an avid user of the Forest productivity app until a shift in its monetization model placed core features behind a new subscription paywall, frustrating many users including myself.
+                            </p>
+                            <p className="text-lg text-[#14213D] dark:text-[#E5E5E5]">
+                                I saw this as an opportunity to apply my skills. I took the initiative to architect and build Study-jar, my own productivity application. My vision is to provide a powerful, user-centric, and completely free tool for students. Study-jar is my answer to a market need, and I am actively developing a feature roadmap, including a community leaderboard, to expand its capabilities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Features Section */}
                 <div className="py-20">
                     <h2 className="text-3xl font-bold text-center text-[#14213D] dark:text-white mb-12">
