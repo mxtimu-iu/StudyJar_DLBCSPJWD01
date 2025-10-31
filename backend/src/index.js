@@ -17,7 +17,7 @@ const app = express();
 
 // --- START: UPDATED CORS CONFIGURATION ---
 // This is the URL i will get from Vercel after you deploy your frontend
-const VERCEL_CLIENT_URL = "https://study-jar-dlbcspjwd-01-frontend.vercel.app";
+const VERCEL_CLIENT_URL = "https://study-jar-dlbcspjwd-01-frontend-j3xrap3ql-matimu-s-projects.vercel.app";
 
 const corsOptions = {
     // This array allows both your local machine and your Vercel app to make requests
