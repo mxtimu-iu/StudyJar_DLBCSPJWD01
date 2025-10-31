@@ -89,13 +89,13 @@ export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) =>
 
     if (!data) {
         return (
-            <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg p-6 mb-6">
                 <div className="animate-pulse flex space-x-4">
                     <div className="flex-1 space-y-4 py-1">
-                        <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                        <div className="h-4 bg-[#E5E5E5] dark:bg-[#000000] rounded w-3/4"></div>
                         <div className="space-y-2">
-                            <div className="h-4 bg-gray-200 rounded"></div>
-                            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                            <div className="h-4 bg-[#E5E5E5] dark:bg-[#000000] rounded"></div>
+                            <div className="h-4 bg-[#E5E5E5] dark:bg-[#000000] rounded w-5/6"></div>
                         </div>
                     </div>
                 </div>
@@ -106,41 +106,41 @@ export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) =>
     const progress = (data.progress.totalMinutes / data.dailyGoal) * 100;
 
     return (
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg p-6 mb-6">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-800">Daily Progress</h2>
+                <h2 className="text-2xl font-bold text-[#14213D] dark:text-white">Daily Progress</h2>
                 <div className="flex items-center space-x-2">
-                    <span className="text-indigo-600">
+                    <span className="text-[#FCA311] dark:text-[#FCA311]">
                         🔥 {data.streak} day streak
                     </span>
                 </div>
             </div>
 
             {/* Progress Bar */}
-            <div className="relative h-4 bg-gray-200 rounded-full mb-4">
+            <div className="relative h-4 bg-[#E5E5E5] dark:bg-[#000000] rounded-full mb-4">
                 <motion.div
-                    className="absolute h-full bg-indigo-600 rounded-full"
+                    className="absolute h-full bg-[#FCA311] rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${Math.min(progress, 100)}%` }}
                     transition={{ duration: 0.5 }}
                 />
             </div>
 
-            <div className="flex justify-between items-center text-sm text-gray-600">
+            <div className="flex justify-between items-center text-sm text-[#14213D] dark:text-[#E5E5E5]">
                 <span>{data.progress.totalMinutes} minutes today</span>
                 <div className="flex items-center">
                     {isEditingGoal ? (
                         <>
                             <input
                                 type="number"
-                                className="w-16 px-2 py-1 border rounded mr-2"
+                                className="w-16 px-2 py-1 border border-[#14213D] dark:border-[#E5E5E5] bg-[#FFFFFF] dark:bg-[#000000] text-[#14213D] dark:text-[#E5E5E5] rounded mr-2"
                                 value={newGoal}
                                 onChange={(e) => setNewGoal(e.target.value)}
                                 min="1"
                             />
                             <button
                                 onClick={updateDailyGoal}
-                                className="text-indigo-600 hover:text-indigo-800"
+                                className="text-[#FCA311] hover:text-[#e38f0d]"
                             >
                                 Save
                             </button>
@@ -153,7 +153,7 @@ export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) =>
                                     setNewGoal(data.dailyGoal.toString());
                                     setIsEditingGoal(true);
                                 }}
-                                className="ml-2 text-indigo-600 hover:text-indigo-800"
+                                className="ml-2 text-[#FCA311] hover:text-[#e38f0d]"
                             >
                                 ✏️
                             </button>

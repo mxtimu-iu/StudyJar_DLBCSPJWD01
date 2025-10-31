@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
                 <div className="flex justify-between h-16">
                     <div className="flex">
                         <div className="flex-shrink-0 flex items-center">
-                            <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">Study-Jar</span>
+                            <span className="text-xl font-bold text-[#FCA311] dark:text-[#FCA311]">Study-Jar</span>
                         </div>
                         {/* Desktop Menu */}
                         <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
