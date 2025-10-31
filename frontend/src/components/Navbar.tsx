@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import StudyJarLogo from '../assets/study-jar-logo.svg';
 
 export const Navbar: React.FC = () => {
     const { user, logout } = useAuth();
@@ -38,7 +39,8 @@ export const Navbar: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex">
-                        <div className="flex-shrink-0 flex items-center">
+                        <div className="flex-shrink-0 flex items-center space-x-3">
+                            <img src={StudyJarLogo} alt="Study-Jar logo" className="h-8 w-8 object-contain" />
                             <span className="text-xl font-bold text-[#FCA311] dark:text-[#FCA311]">Study-Jar</span>
                         </div>
                         {/* Desktop Menu */}

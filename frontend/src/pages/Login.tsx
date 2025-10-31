@@ -64,7 +64,7 @@ export const Login: React.FC = () => {
                                 name="email"
                                 type="email"
                                 required
-                                className="input rounded-t-md"
+                                className="input rounded-t-md bg-[#000000] text-[#FFFFFF] placeholder:text-[#E5E5E5] border-[#14213D] focus:ring-[#FCA311] focus:border-[#FCA311]"
                                 placeholder="Email address"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -79,7 +79,7 @@ export const Login: React.FC = () => {
                                 name="password"
                                 type="password"
                                 required
-                                className="input rounded-b-md"
+                                className="input rounded-b-md bg-[#000000] text-[#FFFFFF] placeholder:text-[#E5E5E5] border-[#14213D] focus:ring-[#FCA311] focus:border-[#FCA311]"
                                 placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}

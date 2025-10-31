@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import StudyJarLogo from '../assets/study-jar-logo.svg';
 
 export const Landing: React.FC = () => {
     return (
@@ -9,7 +10,12 @@ export const Landing: React.FC = () => {
                 {/* Navigation */}
                 <nav className="py-6">
                     <div className="flex justify-between items-center">
-                        <div className="flex items-center">
+                        <div className="flex items-center space-x-3">
+                            <img
+                                src={StudyJarLogo}
+                                alt="Study-Jar logo"
+                                className="h-10 w-10 object-contain"
+                            />
                             <span className="text-2xl font-bold text-[#FCA311] dark:text-[#FCA311]">
                                 Study-Jar
                             </span>
