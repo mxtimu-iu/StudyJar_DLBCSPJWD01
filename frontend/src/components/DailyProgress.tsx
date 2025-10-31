@@ -17,6 +17,9 @@ interface DailyProgressData {
     streak: number;
 }
 
+// Get the production API URL from the environment
+const API_URL = import.meta.env.VITE_API_URL || process.env.REACT_APP_API_URL;
+
 export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) => {
     const [data, setData] = useState<DailyProgressData | null>(null);
     const [error, setError] = useState<string | null>(null);
@@ -27,7 +30,8 @@ export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) =>
     const fetchProgress = async () => {
         try {
             console.log('Fetching daily progress...');
-            const response = await axios.get('http://localhost:5000/api/daily-progress/today', {
+            // CHANGED: Use the API_URL environment variable
+            const response = await axios.get(`${API_URL}/api/daily-progress/today`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json'
@@ -56,7 +60,8 @@ export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) =>
 
     const updateDailyGoal = async () => {
         try {
-            await axios.put('http://localhost:5000/api/daily-progress/goal',
+            // CHANGED: Use the API_URL environment variable
+            await axios.put(`${API_URL}/api/daily-progress/goal`,
                 { dailyGoal: parseInt(newGoal) },
                 {
                     headers: {
@@ -173,4 +178,4 @@ export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) =>
             )}
         </div>
     );
-}; 
+};
