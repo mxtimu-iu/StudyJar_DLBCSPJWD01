@@ -18,7 +18,9 @@ interface DailyProgressData {
 }
 
 // Get the production API URL from the environment
-const API_URL = import.meta.env.VITE_API_URL || process.env.REACT_APP_API_URL;
+// const API_URL = import.meta.env.VITE_API_URL || process.env.REACT_APP_API_URL;
+// Get the production API URL from the environment
+const API_URL = process.env.REACT_APP_API_URL; // <-- CORRECTED
 
 export const DailyProgress: React.FC<DailyProgressProps> = ({ onGoalUpdate }) => {
     const [data, setData] = useState<DailyProgressData | null>(null);
