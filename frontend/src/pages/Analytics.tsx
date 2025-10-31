@@ -133,7 +133,7 @@ export const Analytics: React.FC = () => {
                         <button
                             onClick={() => setTimeframe('week')}
                             className={`px-4 py-2 rounded-lg ${timeframe === 'week'
-                                ? 'bg-indigo-600 text-white'
+                                ? 'bg-[#FCA311] text-[#000000]'
                                 : 'bg-white text-gray-600 hover:bg-gray-50'
                                 }`}
                         >
@@ -142,7 +142,7 @@ export const Analytics: React.FC = () => {
                         <button
                             onClick={() => setTimeframe('month')}
                             className={`px-4 py-2 rounded-lg ${timeframe === 'month'
-                                ? 'bg-indigo-600 text-white'
+                                ? 'bg-[#FCA311] text-[#000000]'
                                 : 'bg-white text-gray-600 hover:bg-gray-50'
                                 }`}
                         >
@@ -155,19 +155,19 @@ export const Analytics: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-white rounded-lg shadow p-6">
                         <h3 className="text-lg font-medium text-gray-900">Total Study Time</h3>
-                        <p className="mt-2 text-3xl font-bold text-indigo-600">
+                        <p className="mt-2 text-3xl font-bold text-[#FCA311]">
                             {formatMinutes(data.achievements.totalStudyTime)}
                         </p>
                     </div>
                     <div className="bg-white rounded-lg shadow p-6">
                         <h3 className="text-lg font-medium text-gray-900">Longest Streak</h3>
-                        <p className="mt-2 text-3xl font-bold text-indigo-600">
+                        <p className="mt-2 text-3xl font-bold text-[#FCA311]">
                             {data.achievements.longestStreak} days
                         </p>
                     </div>
                     <div className="bg-white rounded-lg shadow p-6">
                         <h3 className="text-lg font-medium text-gray-900">Total Gems</h3>
-                        <p className="mt-2 text-3xl font-bold text-indigo-600">
+                        <p className="mt-2 text-3xl font-bold text-[#FCA311]">
                             {data.achievements.gemCounts.reduce((acc, curr) => acc + curr.count, 0)}
                         </p>
                     </div>
@@ -189,7 +189,7 @@ export const Analytics: React.FC = () => {
                                         labelFormatter={(label: string) => new Date(label).toLocaleDateString()}
                                     />
                                     <Legend />
-                                    <Bar dataKey="totalDuration" fill="#4F46E5" name="Study Time" />
+                                    <Bar dataKey="totalDuration" fill="#FCA311" name="Study Time" />
                                 </BarChart>
                             </ResponsiveContainer>
                         </div>
