@@ -30,17 +30,17 @@ export const Login: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-md w-full space-y-8">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#E5E5E5] to-[#FFFFFF] dark:from-[#000000] dark:to-[#14213D] py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-md w-full space-y-8 bg-[#FFFFFF] dark:bg-[#14213D] rounded-2xl shadow-xl p-8">
                 <div>
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    <h2 className="mt-6 text-center text-3xl font-extrabold text-[#14213D] dark:text-white">
                         Sign in to your account
                     </h2>
-                    <p className="mt-2 text-center text-sm text-gray-600">
+                    <p className="mt-2 text-center text-sm text-[#14213D] dark:text-[#E5E5E5]">
                         Or{' '}
                         <Link
                             to="/register"
-                            className="font-medium text-primary-600 hover:text-primary-500"
+                            className="font-medium text-[#FCA311] hover:text-[#e38f0d] dark:text-[#FCA311] dark:hover:text-[#e38f0d]"
                         >
                             create a new account
                         </Link>
@@ -90,7 +90,7 @@ export const Login: React.FC = () => {
                     <div>
                         <button
                             type="submit"
-                            className="btn-primary w-full"
+                            className="w-full bg-[#FCA311] text-[#000000] hover:bg-[#e38f0d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FCA311] rounded-md py-3 text-sm font-medium transition-colors disabled:opacity-70"
                             disabled={loading}
                         >
                             {loading ? 'Signing in...' : 'Sign in'}
