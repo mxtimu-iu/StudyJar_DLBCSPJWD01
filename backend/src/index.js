@@ -51,10 +51,16 @@ app.get('/api/test', (req, res) => {
 });
 
 // Error handling middleware
+// app.use((err, req, res, next) => {
+//     console.error(err.stack);
+//   .json({ message: 'Something went wrong!' });
+// });
+// Error handling middleware
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-  .json({ message: 'Something went wrong!' });
-});
+        console.error(err.stack);
+        // This is the corrected line:
+        res.status(500).json({ message: 'Something went wrong!' }); 
+    });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
