@@ -58,36 +58,36 @@ export const Stats: React.FC<StatsProps> = ({ className = '' }) => {
 
     return (
         <div className={`space-y-6 ${className}`}>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Today's Progress</h2>
+            <h2 className="text-2xl font-bold text-[#14213D] dark:text-[#FFFFFF] mb-6">Today's Progress</h2>
 
             <div className="flex justify-between gap-4 mb-6">
-                <div className="flex flex-col items-center justify-center w-24 h-24 bg-blue-100 rounded-lg text-center p-2">
-                    <div className="text-blue-600 text-2xl">
+                <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#E5E5E5] dark:bg-[#000000] rounded-lg text-center p-2">
+                    <div className="text-[#14213D] dark:text-[#FCA311] text-2xl">
                         <ClockIcon className="w-8 h-8" />
                     </div>
-                    <p className="text-sm font-medium whitespace-nowrap">Total Time</p>
-                    <p className="text-xl font-bold">{formatDuration(todayStats.totalDuration)}</p>
+                    <p className="text-sm font-medium whitespace-nowrap text-[#14213D] dark:text-[#E5E5E5]">Total Time</p>
+                    <p className="text-xl font-bold text-[#14213D] dark:text-[#FFFFFF]">{formatDuration(todayStats.totalDuration)}</p>
                 </div>
 
-                <div className="flex flex-col items-center justify-center w-24 h-24 bg-green-100 rounded-lg text-center p-2">
-                    <div className="text-green-600 text-2xl">
+                <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#E5E5E5] dark:bg-[#000000] rounded-lg text-center p-2">
+                    <div className="text-[#14213D] dark:text-[#FCA311] text-2xl">
                         <ChartBarIcon className="w-8 h-8" />
                     </div>
-                    <p className="text-sm font-medium whitespace-nowrap">Sessions</p>
-                    <p className="text-xl font-bold">{todayStats.sessions}</p>
+                    <p className="text-sm font-medium whitespace-nowrap text-[#14213D] dark:text-[#E5E5E5]">Sessions</p>
+                    <p className="text-xl font-bold text-[#14213D] dark:text-[#FFFFFF]">{todayStats.sessions}</p>
                 </div>
 
-                <div className="flex flex-col items-center justify-center w-24 h-24 bg-yellow-100 rounded-lg text-center p-2">
-                    <div className="text-yellow-600 text-2xl">
+                <div className="flex flex-col items-center justify-center w-24 h-24 bg-[#E5E5E5] dark:bg-[#000000] rounded-lg text-center p-2">
+                    <div className="text-[#14213D] dark:text-[#FCA311] text-2xl">
                         <FireIcon className="w-8 h-8" />
                     </div>
-                    <p className="text-sm font-medium whitespace-nowrap">Gems</p>
-                    <p className="text-xl font-bold">{todayStats.gems.length}</p>
+                    <p className="text-sm font-medium whitespace-nowrap text-[#14213D] dark:text-[#E5E5E5]">Gems</p>
+                    <p className="text-xl font-bold text-[#14213D] dark:text-[#FFFFFF]">{todayStats.gems.length}</p>
                 </div>
             </div>
 
-            <div className="card p-4">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            <div className="card p-4 bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg">
+                <h3 className="text-lg font-semibold text-[#14213D] dark:text-[#FFFFFF] mb-4">
                     Today's Gems
                 </h3>
                 <div className="flex flex-wrap gap-4">

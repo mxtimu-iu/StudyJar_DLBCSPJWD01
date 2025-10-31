@@ -96,7 +96,7 @@ export const Dashboard: React.FC = () => {
                     </div>
                     <div className="space-y-6">
                         <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg p-6">
-                            <h2 className="text-2xl font-bold text-[#14213D] dark:text-white mb-6">
+                            <h2 className="text-2xl font-bold text-[#14213D] dark:text-[#FFFFFF] mb-6">
                                 Today's Jar
                             </h2>
                             <div className="flex flex-col items-center justify-between h-full">
