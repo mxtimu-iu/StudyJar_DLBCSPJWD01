@@ -40,8 +40,8 @@ export const Navbar: React.FC = () => {
                             <Link
                                 to="/dashboard"
                                 className={`${location.pathname === '/dashboard'
-                                    ? 'border-indigo-500 text-gray-900 dark:text-dark-text'
-                                    : 'border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-gray-300'
+                                    ? 'border-[#FCA311] text-gray-900 dark:text-dark-text'
+                                    : 'border-transparent text-gray-500 dark:text-gray-400 hover:border-[#FCA311] hover:text-gray-700 dark:hover:text-[#FCA311]'
                                     } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
                             >
                                 Dashboard
@@ -49,8 +49,8 @@ export const Navbar: React.FC = () => {
                             <Link
                                 to="/analytics"
                                 className={`${location.pathname === '/analytics'
-                                    ? 'border-indigo-500 text-gray-900 dark:text-dark-text'
-                                    : 'border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-gray-300'
+                                    ? 'border-[#FCA311] text-gray-900 dark:text-dark-text'
+                                    : 'border-transparent text-gray-500 dark:text-gray-400 hover:border-[#FCA311] hover:text-gray-700 dark:hover:text-[#FCA311]'
                                     } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
                             >
                                 Analytics
@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
                     <div className="flex items-center space-x-4">
                         <button
                             onClick={toggleDarkMode}
-                            className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-dark-bg"
+                            className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FCA311]"
                         >
                             {isDarkMode ? (
                                 <SunIcon className="h-6 w-6" />
@@ -72,8 +72,8 @@ export const Navbar: React.FC = () => {
                         <Link
                             to="/settings"
                             className={`${location.pathname === '/settings'
-                                ? 'text-indigo-600 dark:text-indigo-400'
-                                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                                ? 'text-[#FCA311] dark:text-[#FCA311]'
+                                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-[#FCA311]'
                                 } px-3 py-2 rounded-md text-sm font-medium`}
                         >
                             Settings
@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
                     <div className="flex items-center sm:hidden">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FCA311]"
                             aria-expanded="false"
                         >
                             <span className="sr-only">Open main menu</span>
@@ -135,8 +135,8 @@ export const Navbar: React.FC = () => {
                     <Link
                         to="/dashboard"
                         className={`${location.pathname === '/dashboard'
-                            ? 'bg-indigo-50 border-indigo-500 text-indigo-700 dark:bg-dark-bg dark:border-dark-bg dark:text-dark-text'
-                            : 'border-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 dark:hover:bg-dark-bg dark:hover:border-dark-bg dark:hover:text-dark-text'
+                            ? 'bg-[#FCA311]/10 border-[#FCA311] text-[#14213D] dark:bg-[#FCA311]/10 dark:border-[#FCA311] dark:text-[#FCA311]'
+                            : 'border-transparent text-gray-500 dark:text-gray-400 hover:bg-[#FCA311]/10 hover:border-[#FCA311] hover:text-[#14213D] dark:hover:bg-[#FCA311]/10 dark:hover:border-[#FCA311] dark:hover:text-[#FCA311]'
                             } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -145,8 +145,8 @@ export const Navbar: React.FC = () => {
                     <Link
                         to="/analytics"
                         className={`${location.pathname === '/analytics'
-                            ? 'bg-indigo-50 border-indigo-500 text-indigo-700 dark:bg-dark-bg dark:border-dark-bg dark:text-dark-text'
-                            : 'border-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 dark:hover:bg-dark-bg dark:hover:border-dark-bg dark:hover:text-dark-text'
+                            ? 'bg-[#FCA311]/10 border-[#FCA311] text-[#14213D] dark:bg-[#FCA311]/10 dark:border-[#FCA311] dark:text-[#FCA311]'
+                            : 'border-transparent text-gray-500 dark:text-gray-400 hover:bg-[#FCA311]/10 hover:border-[#FCA311] hover:text-[#14213D] dark:hover:bg-[#FCA311]/10 dark:hover:border-[#FCA311] dark:hover:text-[#FCA311]'
                             } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
