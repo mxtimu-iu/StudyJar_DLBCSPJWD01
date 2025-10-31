@@ -58,62 +58,64 @@ export const Dashboard: React.FC = () => {
     const progress = Math.min(totalMinutes / dailyGoal, 1);
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                    <DailyProgress onGoalUpdate={setDailyGoal} />
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                            Study Timer
-                        </h2>
-                        {selectedSubject ? (
-                            <div className="flex flex-col items-center space-y-6">
-                                <Timer
-                                    subject={selectedSubject}
-                                    onComplete={handleSessionComplete}
-                                />
-                            </div>
-                        ) : (
-                            <div className="flex flex-col items-center space-y-8">
-                                <div className="flex flex-col items-center space-y-2">
-                                    <h3 className="text-lg font-medium text-gray-700 text-center">
-                                        Select a subject to start studying
-                                    </h3>
-                                    <p className="text-sm text-gray-500 text-center">
-                                        Choose a subject to begin your study session
-                                    </p>
-                                </div>
-                                <div className="w-full max-w-md bg-gray-50 rounded-lg p-4">
-                                    <SubjectPicker
-                                        onSelect={setSelectedSubject}
-                                        selectedSubject={selectedSubject}
+        <div className="min-h-screen bg-gradient-to-br from-[#E5E5E5] to-[#FFFFFF] dark:from-[#000000] dark:to-[#14213D] py-8">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                        <DailyProgress onGoalUpdate={setDailyGoal} />
+                        <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg p-6">
+                            <h2 className="text-2xl font-bold text-[#14213D] dark:text-white mb-6">
+                                Study Timer
+                            </h2>
+                            {selectedSubject ? (
+                                <div className="flex flex-col items-center space-y-6">
+                                    <Timer
+                                        subject={selectedSubject}
+                                        onComplete={handleSessionComplete}
                                     />
                                 </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-                <div className="space-y-6">
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                            Today's Jar
-                        </h2>
-                        <div className="flex flex-col items-center justify-between h-full">
-                            <div className="aspect-square w-full max-w-md">
-                                <GemJar
-                                    gems={todayGems}
-                                    progress={progress}
-                                    className="h-full"
-                                />
-                            </div>
-                            <div className="mt-6 text-center text-gray-600">
-                                {progress < 1
-                                    ? `${Math.round(progress * 100)}% full (${totalMinutes}/${dailyGoal} minutes)`
-                                    : 'Jar is full! 🎉'}
-                            </div>
+                            ) : (
+                                <div className="flex flex-col items-center space-y-8">
+                                    <div className="flex flex-col items-center space-y-2">
+                                        <h3 className="text-lg font-medium text-[#14213D] dark:text-[#E5E5E5] text-center">
+                                            Select a subject to start studying
+                                        </h3>
+                                        <p className="text-sm text-[#14213D] dark:text-[#E5E5E5] text-center">
+                                            Choose a subject to begin your study session
+                                        </p>
+                                    </div>
+                                    <div className="w-full max-w-md bg-[#E5E5E5] dark:bg-[#000000] rounded-lg p-4">
+                                        <SubjectPicker
+                                            onSelect={setSelectedSubject}
+                                            selectedSubject={selectedSubject}
+                                        />
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
-                    <Stats />
+                    <div className="space-y-6">
+                        <div className="bg-[#FFFFFF] dark:bg-[#14213D] rounded-lg shadow-lg p-6">
+                            <h2 className="text-2xl font-bold text-[#14213D] dark:text-white mb-6">
+                                Today's Jar
+                            </h2>
+                            <div className="flex flex-col items-center justify-between h-full">
+                                <div className="aspect-square w-full max-w-md">
+                                    <GemJar
+                                        gems={todayGems}
+                                        progress={progress}
+                                        className="h-full"
+                                    />
+                                </div>
+                                <div className="mt-6 text-center text-[#14213D] dark:text-[#E5E5E5]">
+                                    {progress < 1
+                                        ? `${Math.round(progress * 100)}% full (${totalMinutes}/${dailyGoal} minutes)`
+                                        : 'Jar is full! 🎉'}
+                                </div>
+                            </div>
+                        </div>
+                        <Stats />
+                    </div>
                 </div>
             </div>
         </div>
